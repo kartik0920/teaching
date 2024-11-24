@@ -1,0 +1,126 @@
+Count set bits in an integer
+Program to find whether a no is power of two
+sum of digit
+
+Count total set bits in all numbers from 1 to n    ->hw
+multiply of digit   ->hw
+
+
+
+
+
+1) Count set bit
+ans:->
+eg)2 ====== 10     no.of ones=1  ans-->1
+eg)7 ====== 111    no.of ones=3  ans-->3
+ip:-integer
+op:- no of ones
+7---111
+32bit = (0) 000000......... 111 total count=32
+
+000
+<<  001  -left
+>>  100  -right
+0001
+1000
+
+opeartin and or 
+(1 true)
+(0 false)
+(and ---> 11   => 1)
+(or  -----> 01 10 11   ====> 1)
+
+
+(>> : )
+(<< : )
+
+while(n != 0)
+
+0000......111     
+(1 & 1)    ---> 1    count++
+(0 & 1)    --->  0 
+
+00000......11
+(1 & 1)    ---> 1    count++
+(0 & 1)    --->  0 
+
+
+000000......1
+(1 & 1)    ---> 1    count++
+(0 & 1)    --->  0
+
+
+0000000......0  aagr ele==0
+exit
+
+12222331
+00122223
+
+
+00001101
+0000000
+00000000000....101
+(1 (&1))->count++==1
+
+000000000000....10
+(0 (&1))-->0
+
+
+
+2)sum of digit
+123===>1+2+3   =->6
+2342====>2+3+4+2 ==>11
+
+%-->reminder     /=quotient
+sum=0;
+
+2342%10---->2
+sum=sum+2;
+num=num/10;
+123
+
+
+123%10   ->3
+sum=sum+3;
+12
+
+
+12%10---2
+sum=sum+2;
+1
+
+
+1%10 1
+sum=sum+1
+1/10  =0
+
+
+
+n==123
+x==12
+n=x
+
+
+0 exit
+return sum
+
+
+
+3)pow of 2
+1 2 4 8 16 32 ..........
+sare power of 2
+output true   output faslse
+
+3   op:false
+128 op
+
+//binary
+1   0000000001     true  1
+2   0000000010     true  1
+3   0000000011     2 false
+4   0000000100     true  1 
+5   0000000101     
+6   0000000110
+7   0000000111
+8   0000001000     true
+
